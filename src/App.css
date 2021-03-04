@@ -10,11 +10,19 @@
 
 h2 {
   color: rgb(14, 120, 124);
+  font-weight: bold;
+}
+
+.hover {
+  color: cadetblue;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  padding-right: 20px;
+  font-weight: 500;
 }
 
 .hover:hover {
-  background-color: cadetblue;
   opacity: 0.5;
+  text-decoration: none;
   border-radius: 5px;
-  transition: all 0.3s ease-out;
 }
