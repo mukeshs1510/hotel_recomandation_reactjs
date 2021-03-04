@@ -2,9 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: cadetblue;
 }
 
 .App-header {
   color: white;
+}
+
+h2 {
+  color: rgb(14, 120, 124);
+}
+
+.hover:hover {
+  background-color: cadetblue;
+  opacity: 0.5;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
 }
