@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
+import Navbar from "./Navbar";
 
-export default class HomePage extends Component {
-  render() {
-    return (
-      <div>
-        <h5 className="body">Hello World! Body</h5>
-      </div>
-    );
-  }
+export default function HomePage() {
+  return (
+    <div>
+      <Navbar />
+      <h5>Hello World! Body</h5>
+    </div>
+  );
 }
