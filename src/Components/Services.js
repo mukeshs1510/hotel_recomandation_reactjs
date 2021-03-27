@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../Components/Screens/Navbar";
 
-export default function HomePage() {
+export default function Services() {
   return (
     <div className="background">
       <Navbar />

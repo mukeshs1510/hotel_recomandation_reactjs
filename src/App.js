@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./Components/Screens/HomePage";
 import Login from "./Components/Screens/Login";
 import PrivateRoute from "./database/PrivateRoute";
+import Services from "./Components/Services";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <PrivateRoute path="/" exact component={HomePage} />
             <Route path="/signup" component={SIgnup} />
             <Route path="/login" component={Login} />
+            <Route path="/service" component={Services} />
           </Switch>
         </AuthProvider>
       </Router>

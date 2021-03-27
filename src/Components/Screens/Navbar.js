@@ -1,7 +1,7 @@
 import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import { useAuth } from "../../database/AuthContext";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 export default function Navbar() {
@@ -34,7 +34,7 @@ export default function Navbar() {
   }
 
   return (
-    <ReactBootStrap.Navbar bg="dark" expand="lg">
+    <ReactBootStrap.Navbar bg="dark" style={{ position: "fixed" }} expand="lg">
       <ReactBootStrap.Navbar.Brand href="#home">
         <h4 style={{ color: "#CAD5E2", paddingLeft: 30 }}>
           Hotel Recomandation System
@@ -48,7 +48,9 @@ export default function Navbar() {
             className="hover"
             href="#home"
           >
-            Home
+            <Link style={{ color: "white", textDecoration: "none" }} to="/">
+              Home
+            </Link>
           </ReactBootStrap.Nav.Link>
           <ReactBootStrap.Nav.Link
             style={{
@@ -57,14 +59,19 @@ export default function Navbar() {
               marginTop: 5,
             }}
             className="hover"
-            href="#home"
+            // href="/"
           >
-            Services
+            <Link
+              style={{ color: "white", textDecoration: "none" }}
+              to="/service"
+            >
+              Services
+            </Link>
           </ReactBootStrap.Nav.Link>
           <ReactBootStrap.Nav.Link
             style={{ color: "white", fontSize: 18 }}
             className="hover"
-            href="#home"
+            // href="/service"
           >
             <Button
               style={{
