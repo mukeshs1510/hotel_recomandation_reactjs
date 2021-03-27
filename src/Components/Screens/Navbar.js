@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import { useAuth } from "../../database/AuthContext";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 export default function Navbar() {
@@ -25,6 +25,14 @@ export default function Navbar() {
     } catch (error) {}
   }
 
+  function handleCurrentUser() {
+    if (currentUser == null) {
+      return "Login";
+    } else {
+      return currentUser.email;
+    }
+  }
+
   return (
     <ReactBootStrap.Navbar bg="dark" expand="lg">
       <ReactBootStrap.Navbar.Brand href="#home">
@@ -36,7 +44,7 @@ export default function Navbar() {
       <ReactBootStrap.Navbar.Collapse id="basic-navbar-nav">
         <ReactBootStrap.Nav className="ml-auto">
           <ReactBootStrap.Nav.Link
-            style={{ color: "white", fontSize: 18 }}
+            style={{ color: "white", fontSize: 18, marginTop: 5 }}
             className="hover"
             href="#home"
           >
@@ -46,8 +54,7 @@ export default function Navbar() {
             style={{
               color: "white",
               fontSize: 18,
-              textAlign: "center",
-              justifyContent: "center",
+              marginTop: 5,
             }}
             className="hover"
             href="#home"
